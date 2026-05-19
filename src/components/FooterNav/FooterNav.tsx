@@ -1,4 +1,4 @@
-import { View, StyleSheet } from "react-native";
+/* import { View, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../../constants/theme";
 
@@ -41,4 +41,4 @@ const styles = StyleSheet.create({
         borderTopWidth: 1,
         borderColor: COLORS.gray,
     },
-});
+}); */

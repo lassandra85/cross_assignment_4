@@ -1,4 +1,4 @@
-import { View,StyleSheet, ScrollView, Dimensions } from "react-native";
+/* import { View,StyleSheet, ScrollView, Dimensions } from "react-native";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import { COLORS, SIZES } from "../../constants/theme";
 import { categories } from "../../data/categories";
@@ -51,4 +51,4 @@ fontSize: 22,
 fontWeight: "700",
 color: COLORS.textDark,
 },
-});
+}); */

@@ -1,16 +1,9 @@
-import { TouchableOpacity, Text, StyleSheet, Platform  } from "react-native";
+/* import { TouchableOpacity, Text, StyleSheet, Platform  } from "react-native";
 import React from "react";
 import { COLORS, SIZES } from "../../constants/theme";
 
 
-type Props = {
-title: string;
-onPress?: () => void;
-type?: "primary" | "secondary";
-};
-
-
-export default function CustomButton({ title, onPress, type = "primary" }: Props) {
+export default function CustomButton({ title, onPress, type = "primary" }) {
 return (
 <TouchableOpacity
 onPress={onPress}
@@ -47,4 +40,4 @@ const styles = StyleSheet.create({
             default: '600',
         }),
     },
-});
+}); */

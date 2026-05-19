@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+/* import { View, Text, Image, StyleSheet } from "react-native";
 import React from "react";
 import { COLORS, SIZES } from "../../constants/theme";
 type Props = {
@@ -35,4 +35,4 @@ title: {
     fontWeight: "700",
     color: COLORS.textDark,
 },
-});
+}); */
