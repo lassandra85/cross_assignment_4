@@ -3,9 +3,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import WelcomeScreen from '../screens/WelcomeScreen';
 import HomeScreen from '../screens/HomeScreen';
-import OptionsScreen from '../screens/OptionsScreen';
 import CategoryDetailsScreen from '../screens/CategoryDetailsScreen';
+import OptionsScreen from '../screens/OptionsScreen';
 import DateScreen from '../screens/DateScreen';
+import FavoritesScreen from '../screens/FavoritesScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,10 +32,20 @@ export default function AppNavigator() {
           name="CategoryDetails"
           component={CategoryDetailsScreen}
         />
+              
+        <Stack.Screen
+            name="Options"
+            component={OptionsScreen}
+        />
 
         <Stack.Screen
           name="Date"
           component={DateScreen}
+        />
+              
+        <Stack.Screen
+        name="Favorites"
+        component={FavoritesScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
