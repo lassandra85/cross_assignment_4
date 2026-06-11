@@ -52,3 +52,16 @@ fontWeight: "700",
 color: COLORS.textDark,
 },
 }); */
+
+
+import { View, Text } from 'react-native';
+
+const OptionsScreens = () => {
+  return (
+    <View>
+      <Text>OptionsScreens</Text>
+    </View>
+  );
+};
+
+export default OptionsScreens;

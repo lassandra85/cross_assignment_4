@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+/* import { View, Text, Image, StyleSheet } from "react-native";
 import CustomButton from "../components/CustomButton/CustomButton";
 import { COLORS, SIZES } from "../constants/theme";
 
@@ -47,4 +47,17 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         color: COLORS.textDark,
     },
-});
+}); */
+
+
+import { View, Text } from 'react-native';
+
+const WelcomeScreen = () => {
+  return (
+    <View>
+      <Text>WelcomeScreen</Text>
+    </View>
+  );
+};
+
+export default WelcomeScreen;
