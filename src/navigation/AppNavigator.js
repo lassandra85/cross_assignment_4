@@ -8,13 +8,12 @@ import OptionsScreen from '../screens/OptionsScreen';
 import DateScreen from '../screens/DateScreen';
 import FavoritesScreen from '../screens/FavoritesScreen'; */
 import BottomTabNavigator from './BottomTabNavigator';
-
 import { SCREENS } from '../constants/screens';
+
 
 const Stack = createNativeStackNavigator();
 
-
-export default function AppNavigator() {
+const AppNavigator = () => {
   return (
     <NavigationContainer>
 
@@ -62,3 +61,5 @@ export default function AppNavigator() {
         name="Favorites"
         component={FavoritesScreen}
         /> */}
+
+export default AppNavigator;
