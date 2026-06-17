@@ -36,3 +36,12 @@ title: {
     color: COLORS.textDark,
 },
 }); */
+
+
+
+
+{/* <CategoryCard
+  title="Весілля"
+  icon="💍"
+  onPress={...}
+/> */}

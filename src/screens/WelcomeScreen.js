@@ -9,7 +9,7 @@ const WelcomeScreen = ({ navigation }) => {
  return (
     <View style={styles.container}>
       <Image
-        source={require("../assets/images/salyut.jpg")}
+        source={require("../assets/images/WelcomeScreen.jpeg")}
         style={styles.bg}
       />
 

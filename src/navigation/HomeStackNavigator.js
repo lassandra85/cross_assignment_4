@@ -29,11 +29,6 @@ const HomeStackNavigator = () => {
       />
 
       <Stack.Screen
-        name={SCREENS.OPTIONS}
-        component={OptionsScreen}
-      />
-
-      <Stack.Screen
         name={SCREENS.DATE}
         component={DateScreen}
       />

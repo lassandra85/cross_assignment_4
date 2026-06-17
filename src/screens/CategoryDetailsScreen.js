@@ -1,8 +1,10 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-const CategoryDetailsScreen = ({ route }) => {
-  const { categoryName } = route.params;
-
+const CategoryDetailsScreen = ({ navigation, route, }) => {
+  
+  const categoryName = route?.params?.categoryName ?? 'Категорія не вибрана';
+  
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>
@@ -31,3 +33,10 @@ const styles = StyleSheet.create({
 
 
 export default CategoryDetailsScreen;
+
+/* 🎈 Кульки
+🎂 Торт
+📸 Фотограф
+🎭 Аніматор
+🎵 DJ
+🎁 Декор */

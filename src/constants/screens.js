@@ -5,7 +5,6 @@ export const SCREENS = {
 
   HOME: 'Home',
   CATEGORY_DETAILS: 'CategoryDetails',
-  OPTIONS: 'Options',
   DATE: 'Date',
 
   FAVORITES: 'Favorites',
