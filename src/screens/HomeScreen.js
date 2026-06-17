@@ -53,14 +53,77 @@ color: COLORS.textDark,
 },
 }); */
 
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { SCREENS } from '../constants/screens';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
-    <View>
-      <Text>Home Screen</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>
+        Оберіть тип свята
+      </Text>
+
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() =>
+          navigation.navigate(
+            SCREENS.CATEGORY_DETAILS,
+            {
+              categoryName: 'День народження',
+            }
+          )
+        }
+      >
+        <Text>🎂 День народження</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() =>
+          navigation.navigate(
+            SCREENS.CATEGORY_DETAILS,
+            {
+              categoryName: 'Весілля',
+            }
+          )
+        }
+      >
+        <Text>💍 Весілля</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() =>
+          navigation.navigate(
+            SCREENS.CATEGORY_DETAILS,
+            {
+              categoryName: 'Корпоратив',
+            }
+          )
+        }
+      >
+        <Text>🏢 Корпоратив</Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
-export default HomeScreen;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+  },
+
+  title: {
+    fontSize: 24,
+    fontWeight: '700',
+    marginBottom: 20,
+  },
+
+  card: {
+    padding: 20,
+    borderWidth: 1,
+    borderRadius: 12,
+    marginBottom: 15,
+  },
+});

@@ -6,6 +6,8 @@ import OptionsScreen from '../screens/OptionsScreen';
 import DateScreen from '../screens/DateScreen';
 
 import { SCREENS } from '../constants/screens';
+/* import FavoritesScreen from '../screens/FavoritesScreen'; */
+
 
 const Stack = createNativeStackNavigator();
 
@@ -40,3 +42,8 @@ const HomeStackNavigator = () => {
 };
 
 export default HomeStackNavigator;
+
+/* <Stack.Screen
+        name="Favorites"
+        component={FavoritesScreen}
+    /> */

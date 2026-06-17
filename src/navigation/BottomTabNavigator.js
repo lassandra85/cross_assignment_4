@@ -7,7 +7,7 @@ import FavoritesScreen from '../screens/FavoritesScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
 import { SCREENS } from '../constants/screens';
-import { COLORS } from '../constants/theme';
+import { COLORS } from '../theme';
 
 const Tab = createBottomTabNavigator();
 

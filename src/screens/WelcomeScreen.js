@@ -2,7 +2,7 @@ import { View, Text, Image, StyleSheet } from "react-native";
 
 import CustomButton from "../components/CustomButton";
 
-import { COLORS, SIZES } from "../constants/theme";
+import { COLORS, SIZES } from "../theme";
 import { SCREENS } from "../constants/screens";
 
 const WelcomeScreen = ({ navigation }) => {
