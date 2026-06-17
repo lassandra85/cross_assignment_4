@@ -1,29 +1,38 @@
-/* import { View, Text, Image, StyleSheet } from "react-native";
-import CustomButton from "../components/CustomButton/CustomButton";
+import { View, Text, Image, StyleSheet } from "react-native";
+
+import CustomButton from "../components/CustomButton";
+
 import { COLORS, SIZES } from "../constants/theme";
+import { SCREENS } from "../constants/screens";
 
+const WelcomeScreen = ({ navigation }) => {
+ return (
+    <View style={styles.container}>
+      <Image
+        source={require("../assets/images/salyut.jpg")}
+        style={styles.bg}
+      />
 
-export default function WelcomeScreen({ navigation }) {
-    return (
-        <View style={styles.container}>
-            <Image
-                source={require("../assets/images/salyut.jpg")}
-                style={styles.bg}
-            />
+      <View style={styles.bottomBox}>
+        <Text style={styles.title}>
+          Організація свята мрії
+        </Text>
 
-            <View style={styles.bottomBox}>
-                
-                <Text style={styles.title}>Організація свята мрії</Text>
+        <CustomButton
+          title="Увійти"
+          onPress={() =>
+            navigation.replace(SCREENS.MAIN_TABS)
+          }
+        />
 
-
-                <CustomButton title="Увійти" onPress={() => navigation.navigate('HomeScreen', { itemId: 42, otherParam: 'sample' })}/>
-
-                <CustomButton title="Зареєструватися" type="secondary" />
-            </View>
-        </View>
-    );
-}
-
+        <CustomButton
+          title="Зареєструватися"
+          type="secondary"
+        />
+      </View>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -47,17 +56,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         color: COLORS.textDark,
     },
-}); */
+});
 
-
-import { View, Text } from 'react-native';
-
-const WelcomeScreen = () => {
-  return (
-    <View>
-      <Text>WelcomeScreen</Text>
-    </View>
-  );
-};
 
 export default WelcomeScreen;

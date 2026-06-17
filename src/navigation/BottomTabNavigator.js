@@ -1,4 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
 
 import HomeStackNavigator from './HomeStackNavigator';
 
@@ -6,8 +7,69 @@ import FavoritesScreen from '../screens/FavoritesScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
 import { SCREENS } from '../constants/screens';
+import { COLORS } from '../constants/theme';
 
-import { Ionicons } from '@expo/vector-icons';
+const Tab = createBottomTabNavigator();
+
+
+const BottomTabNavigator = () => {
+  return (
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+            headerShown: false,
+
+            tabBarActiveTintColor: COLORS.secondary,
+            tabBarInactiveTintColor: COLORS.gray,
+
+            tabBarIcon: ({ color, size }) => {
+                let iconName;
+
+                switch (route.name) {
+                    case SCREENS.HOME:
+                    iconName = 'home';
+                    break;
+
+                    case SCREENS.FAVORITES:
+                    iconName = 'heart';
+                    break;
+
+                    case SCREENS.PROFILE:
+                    iconName = 'person';
+                    break;
+
+                    default:
+                    iconName = 'ellipse';
+                }
+
+                return (
+                    <Ionicons
+                        name={iconName}
+                        size={size}
+                        color={color}
+                    />
+                );
+            },
+        })}>
+          
+        <Tab.Screen
+            name={SCREENS.HOME}
+            component={HomeStackNavigator}
+        />
+
+        <Tab.Screen
+            name={SCREENS.FAVORITES}
+            component={FavoritesScreen}
+        />
+
+        <Tab.Screen
+            name={SCREENS.PROFILE}
+            component={ProfileScreen}
+        />
+    </Tab.Navigator>
+  );
+};
+
+export default BottomTabNavigator;
 
 
 
