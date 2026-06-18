@@ -5,7 +5,6 @@ import CategoryDetailsScreen from '../screens/CategoryDetailsScreen';
 import DateScreen from '../screens/DateScreen';
 
 import { SCREENS } from '../constants/screens';
-/* import FavoritesScreen from '../screens/FavoritesScreen'; */
 
 
 const Stack = createNativeStackNavigator();

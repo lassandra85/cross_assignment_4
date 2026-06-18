@@ -53,7 +53,9 @@ color: COLORS.textDark,
 },
 }); */
 
-import { View, Text, StyleSheet, FlatList,} from 'react-native';
+import { View, Text, StyleSheet, FlatList, } from 'react-native';
+
+import CategoryCard from "../components/CategoryCard";
 
 import { CATEGORIES } from "../data/categories";
 
@@ -63,6 +65,7 @@ import { SCREENS } from '../constants/screens';
 const HomeScreen = ({navigation,}) => {
   return (
     <View style={styles.container}>
+      
       <Text style={styles.title}>
         Оберіть тип свята
       </Text>
@@ -75,7 +78,7 @@ const HomeScreen = ({navigation,}) => {
         renderItem={({ item }) => (
           <CategoryCard
             title={item.title}
-            icon={item.icon}
+            image={item.image}
             onPress={() =>
               navigation.navigate(
                 SCREENS.CATEGORY_DETAILS,

@@ -8,7 +8,7 @@ export const CATEGORIES = [
   {
     id: "2",
     title: "Весілля",
-    image: require("../assets/images/birthday.jpg"),
+    image: require("../assets/images/wedding.jpg"),
   },
 
   {
