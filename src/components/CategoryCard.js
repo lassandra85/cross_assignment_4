@@ -5,9 +5,9 @@ import { SIZES } from "../theme/sizes";
 
 
 const CategoryCard = ({
-  title,
-  image,
-  onPress,
+    title,
+    image,
+    onPress,
 }) => {
   return (
     <TouchableOpacity
@@ -27,23 +27,23 @@ const CategoryCard = ({
 
 const styles = StyleSheet.create({
     card: {
+        width: '48%',
         backgroundColor: COLORS.bg,
-        padding: SIZES.md,
+        padding: SIZES.xs,
         borderWidth: 1,
         borderRadius: 12,
         marginBottom: SIZES.md,
         elevation: 3,
     },
     content: {
-        flexDirection: "row",
         alignItems: "center",
     },
     img: {
-        width:80,
-        height: 80,
-        },
+        width:'100%',
+        height: 160,
+    },
     title: {
-        marginBottom: 20,
+        marginBottom: SIZES.xs,
         fontSize: SIZES.md,
         fontWeight: "700",
         color: COLORS.textDark,
