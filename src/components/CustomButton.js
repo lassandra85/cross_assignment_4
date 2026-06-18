@@ -4,7 +4,8 @@ import {
   StyleSheet,
 } from "react-native";
 
-import { COLORS, SIZES } from "../constants/theme";
+import { COLORS} from "../theme/colors";
+import { SIZES } from "../theme/sizes";
 
 const CustomButton = ({
   title,

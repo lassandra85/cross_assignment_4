@@ -2,7 +2,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import HomeScreen from '../screens/HomeScreen';
 import CategoryDetailsScreen from '../screens/CategoryDetailsScreen';
-import OptionsScreen from '../screens/OptionsScreen';
 import DateScreen from '../screens/DateScreen';
 
 import { SCREENS } from '../constants/screens';

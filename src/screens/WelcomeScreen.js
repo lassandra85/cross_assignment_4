@@ -2,14 +2,15 @@ import { View, Text, Image, StyleSheet } from "react-native";
 
 import CustomButton from "../components/CustomButton";
 
-import { COLORS, SIZES } from "../theme";
+import { COLORS} from "../theme/colors";
+import { SIZES } from "../theme/sizes";
 import { SCREENS } from "../constants/screens";
 
 const WelcomeScreen = ({ navigation }) => {
  return (
     <View style={styles.container}>
       <Image
-        source={require("../assets/images/WelcomeScreen.jpeg")}
+        source={require("../assets/images/salyut.jpg")}
         style={styles.bg}
       />
 

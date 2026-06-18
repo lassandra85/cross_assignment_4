@@ -1,47 +1,55 @@
-/* import { View, Text, Image, StyleSheet } from "react-native";
-import React from "react";
-import { COLORS, SIZES } from "../../constants/theme";
-type Props = {
-    title: string;
-    image: any;
-    width: number;
+import { TouchableOpacity, View, Text, Image, StyleSheet } from "react-native";
+
+import { COLORS} from "../theme/colors";
+import { SIZES } from "../theme/sizes";
+
+
+const CategoryCard = ({
+  title,
+  image,
+  onPress,
+}) => {
+  return (
+    <TouchableOpacity
+      style={styles.card}
+      onPress={onPress}
+    >
+      <View style={styles.content}>
+        <Image source={image} style={styles.img} resizeMode="contain" />
+
+        <Text style={styles.title}>
+          {title}
+        </Text>
+      </View>
+    </TouchableOpacity>
+  );
 };
 
-
-export default function CategoryCard({ title, image, width }: Props) {
-return (
-    <View style={[styles.card, {width}]}>
-        <Text style={styles.title}>{title}</Text>
-        <Image source={image} style={styles.img} resizeMode="contain" />
-    </View>
-);
-}
-
-
 const styles = StyleSheet.create({
-card: {
-    backgroundColor: COLORS.bg,
-    padding: 6,
-    borderRadius: SIZES.radius,
-    alignItems: 'center',
-},
-img: {
-width:160,
-height: 160,
-},
-title: {
-    marginBottom: 5,
-    fontSize: 16,
-    fontWeight: "700",
-    color: COLORS.textDark,
-},
-}); */
+    card: {
+        backgroundColor: COLORS.bg,
+        padding: SIZES.md,
+        borderWidth: 1,
+        borderRadius: 12,
+        marginBottom: SIZES.md,
+        elevation: 3,
+    },
+    content: {
+        flexDirection: "row",
+        alignItems: "center",
+    },
+    img: {
+        width:80,
+        height: 80,
+        },
+    title: {
+        marginBottom: 20,
+        fontSize: SIZES.md,
+        fontWeight: "700",
+        color: COLORS.textDark,
+    },
+});
 
 
+export default CategoryCard;
 
-
-{/* <CategoryCard
-  title="Весілля"
-  icon="💍"
-  onPress={...}
-/> */}

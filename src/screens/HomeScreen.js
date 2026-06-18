@@ -53,57 +53,40 @@ color: COLORS.textDark,
 },
 }); */
 
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, FlatList,} from 'react-native';
+
+import { CATEGORIES } from "../data/categories";
+
 import { SCREENS } from '../constants/screens';
 
-const HomeScreen = ({ navigation }) => {
+
+const HomeScreen = ({navigation,}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>
         Оберіть тип свята
       </Text>
 
-      <TouchableOpacity
-        style={styles.card}
-        onPress={() =>
-          navigation.navigate(
-            SCREENS.CATEGORY_DETAILS,
-            {
-              categoryName: 'День народження',
-            }
-          )
-        }
-      >
-        <Text>🎂 День народження</Text>
-      </TouchableOpacity>
+      <FlatList
+        data={CATEGORIES}
 
-      <TouchableOpacity
-        style={styles.card}
-        onPress={() =>
-          navigation.navigate(
-            SCREENS.CATEGORY_DETAILS,
-            {
-              categoryName: 'Весілля',
-            }
-          )
-        }
-      >
-        <Text>💍 Весілля</Text>
-      </TouchableOpacity>
+        keyExtractor={(item) => item.id}
 
-      <TouchableOpacity
-        style={styles.card}
-        onPress={() =>
-          navigation.navigate(
-            SCREENS.CATEGORY_DETAILS,
-            {
-              categoryName: 'Корпоратив',
+        renderItem={({ item }) => (
+          <CategoryCard
+            title={item.title}
+            icon={item.icon}
+            onPress={() =>
+              navigation.navigate(
+                SCREENS.CATEGORY_DETAILS,
+                {
+                  categoryName: item.title,
+                }
+              )
             }
-          )
-        }
-      >
-        <Text>🏢 Корпоратив</Text>
-      </TouchableOpacity>
+          />
+        )}
+      />
     </View>
   );
 };
@@ -119,11 +102,6 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     marginBottom: 20,
   },
-
-  card: {
-    padding: 20,
-    borderWidth: 1,
-    borderRadius: 12,
-    marginBottom: 15,
-  },
 });
+
+export default HomeScreen ;
