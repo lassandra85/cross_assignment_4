@@ -4,8 +4,8 @@
 ## HomeScreen
 ![HomeScreen](screenshots/HomeScreen.jpg)
 
-## CategoryDetailsScreen
-![CategoryDetailsScreen](screenshots/CategoryDetailsScreen.jpg)
+## CategoryScreen
+![CategoryScreen](screenshots/CategoryScreen.jpg)
 
 ## CategoryCorporativeScreen
 ![CategoryCorporativeScreen](screenshots/CategoryCorporativeScreen.jpg)
